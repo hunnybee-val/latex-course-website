@@ -15,21 +15,28 @@
       <div class="table-of-contents">
         <h2 class="table-of-contents_header">Оглавление:</h2>
         <ol class="table-of-contents_list">
-           <li class="table-of-contents__item"><a href="#" class="chapter-link">Лекция 1</a></li>
-           <li class="table-of-contents__item current-chapter"><a href="#" class="chapter-link">Лекция 1</a></li>
-           <li class="table-of-contents__item"><a href="#" class="chapter-link">Лекция 1</a></li>
-           <li class="table-of-contents__item"><a href="#" class="chapter-link">Лекция 1</a></li>
-           <li class="table-of-contents__item"><a href="#" class="chapter-link">Лекция 1</a></li>
+           <li class="table-of-contents__item"><span class="table-of-contents__item__icon">a</span><a href="#" class="chapter-link">Лекция 1</a></li>
+          <!-- <li class="table-of-contents__item current-chapter"><span class="table-of-contents__item__icon">a</span><a href="#" class="chapter-link">Лекция 1</a></li>
+           <li class="table-of-contents__item"><span class="table-of-contents__item__icon">a</span><a href="#" class="chapter-link">Лекция 1</a></li>
+           <li class="table-of-contents__item"><span class="table-of-contents__item__icon">a</span><a href="#" class="chapter-link">Лекция 1</a></li>
+           <li class="table-of-contents__item"><span class="table-of-contents__item__icon">a</span><a href="#" class="chapter-link">Лекция 1</a></li> -->
         </ol>
       </div>
+
       <div class="book">
-       <button type="">Пред</button>
-        <button type="">След</button>
-      </div>
+        <button id = "prev-page-button" class="page-toggle-button">p</button>
+        <div class="book_page left-page"> </div>
+        <div class="book_page right-page"></div>
+        <button id = "next-page-button" class="page-toggle-button">n</button>
+     </div>
+
     </main>
     <footer class="page_footer">
      <p class="copyright">
         Работа выполнена студентами уч. групп 05-004, 05-005
-      </p> 
+      </p>
+      <a class="github-link" href="https://github.com/hunnybee-val/latex-course-website">g</a>
+      <script type="module" src="js/book.js">
+      </script>
   </body>
 </html>

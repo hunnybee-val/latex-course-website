@@ -1,0 +1,41 @@
+.book {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35%;
+  flex-grow: 1;
+}
+
+.book_page {
+  display: block;
+  background-color: $bg-blue;
+  width: 100%;
+  height: 100%;
+  margin-right: 2px;
+}
+.book_page img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 15px;
+}
+.book_page span {
+  @include sub-font(16px);
+  margin-left: 50%;
+  opacity: 0.4;
+}
+.page-toggle-button {
+  height: 93px;
+  width: 93px;
+  @include icon-font(28px);
+  background: none;
+  border: none;
+  opacity: 0.4;
+  &:hover {
+    opacity: 1;
+    transition: opacity 0.2s ease-out;
+    -moz-transition: opacity 0.3s ease-out;
+    -webkit-transition: opacity 0.3s ease-out;
+    -o-transition: opacity 0.3s ease-out;
+  }
+}

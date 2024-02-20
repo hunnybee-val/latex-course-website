@@ -23,6 +23,12 @@
 }
 
 .page__body {
+  margin: 0 auto;
+  padding-top: 64px;
+  width: 87%;
   overflow-x: hidden;
   background-color: $bg-blue;
+  &::-webkit-scrollbar {
+    opacity: 0;
+  }
 }

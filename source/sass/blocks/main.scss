@@ -1,36 +1,6 @@
-.section-header {
-  margin: 0;
+.page_main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 40px;
-  @include sub-font(36px, 40px);
-  @media (min-width: $tablet-width) {
-    margin-bottom: 72px;
-    @include sub-font(60px);
-  }
-}
-
-.section-description {
-  margin: 0;
-  @include sub-font();
-  text-transform: uppercase;
-}
-
-.table-of-contents_list {
-  @include normalize-list();
-}
-.table-of-contents__item {
-  @include sub-font(36px);
-  color: $white;
-  opacity: 0.5;
-}
-
-.table-of-contents__item a {
-  @include normalize-link();
-}
-.current-chapter {
-  opacity: 1;
-  font-size: 40px;
-}
-.table-of-contents_header {
-  @include header-font(48px);
-  color: white;
 }
