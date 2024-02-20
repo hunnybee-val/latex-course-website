@@ -362,7 +362,7 @@ template {
 .page_main {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: top;
   margin-bottom: 40px;
 }
 
@@ -397,7 +397,7 @@ template {
 
 .page__body {
   margin: 0 auto;
-  padding-top: 64px;
+  padding-top: 100px;
   width: 87%;
   overflow-x: hidden;
   background-color: #163666;
@@ -452,7 +452,7 @@ template {
 .book_page {
   display: block;
   background-color: #163666;
-  width: 100%;
+  width: 500px;
   height: 100%;
   margin-right: 2px;
 }
@@ -500,12 +500,15 @@ template {
   padding: 0;
   margin: 0;
   list-style: none;
+  width: 200px;
   height: 450px;
   overflow: scroll;
   overflow-x: hidden;
   padding-left: 30px;
   padding-right: 30px;
   margin-right: 100px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 150px;
 }
 .table-of-contents_list::-webkit-scrollbar {
   width: 5px;
@@ -555,9 +558,10 @@ template {
   margin-right: 15px;
 }
 
-.table-of-contents__item a {
-  text-decoration: none;
-  color: inherit;
+.table-of-contents__item button {
+  background: none;
+  border: none;
+  color: white;
 }
 
 .current-chapter {

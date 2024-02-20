@@ -1,11 +1,14 @@
 .table-of-contents_list {
   @include normalize-list();
+  width: 200px;
   height: 450px;
   overflow: scroll;
   overflow-x: hidden;
   padding-left: 30px;
   padding-right: 30px;
   margin-right: 100px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 150px;
   &::-webkit-scrollbar {
     width: 5px;
   }
@@ -45,8 +48,10 @@
     margin-right: 15px;
   }
 }
-.table-of-contents__item a {
-  @include normalize-link();
+.table-of-contents__item button {
+  background: none;
+  border: none;
+  color: white;
 }
 .current-chapter {
   pointer-events: none;
