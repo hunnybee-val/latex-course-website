@@ -362,7 +362,7 @@ template {
 .page_main {
   display: flex;
   justify-content: space-between;
-  align-items: top;
+  align-items: center;
   margin-bottom: 40px;
 }
 
@@ -397,7 +397,7 @@ template {
 
 .page__body {
   margin: 0 auto;
-  padding-top: 100px;
+  padding-top: 40px;
   width: 87%;
   overflow-x: hidden;
   background-color: #163666;
@@ -440,21 +440,26 @@ template {
   -webkit-transition: opacity 0.3s ease-out;
   -o-transition: opacity 0.3s ease-out;
 }
+.github-link:after {
+  content: "g";
+}
 
 .book {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 35%;
+  width: 50%;
+  height: 550px;
   flex-grow: 1;
+  margin-top: 70px;
 }
 
 .book_page {
   display: block;
   background-color: #163666;
-  width: 500px;
+  width: 700px;
   height: 100%;
-  margin-right: 2px;
+  margin-right: 10px;
 }
 
 .book_page img {
@@ -462,6 +467,7 @@ template {
   height: auto;
   display: block;
   margin-bottom: 15px;
+  box-shadow: 10px 10px 20px #14315e;
 }
 
 .book_page span {
@@ -495,18 +501,26 @@ template {
   -webkit-transition: opacity 0.3s ease-out;
   -o-transition: opacity 0.3s ease-out;
 }
+.page-toggle-button:after {
+  content: "p";
+}
+
+#next-page-button {
+  rotate: 180deg;
+}
 
 .table-of-contents_list {
   padding: 0;
   margin: 0;
   list-style: none;
   width: 200px;
-  height: 450px;
+  height: 380px;
   overflow: scroll;
   overflow-x: hidden;
   padding-left: 30px;
   padding-right: 30px;
-  margin-right: 100px;
+  margin-right: 70px;
+  margin-top: 50px;
   scroll-behavior: smooth;
   scroll-padding-top: 150px;
 }
@@ -552,10 +566,17 @@ template {
   font-family: "Fontello", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 16px;
+  line-height: 16px;
   color: #ffffff;
   margin-right: 15px;
+}
+.table-of-contents__item__icon:after {
+  content: "a";
+}
+
+.current-chapter .table-of-contents__item__icon {
+  font-size: 20px;
 }
 
 .table-of-contents__item button {

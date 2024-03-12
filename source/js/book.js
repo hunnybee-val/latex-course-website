@@ -1,5 +1,7 @@
 import data from "./chapters.json" assert { type: "json" };
 
+const start_pages = data.map((a) => a.start);
+
 const left_page = document.createElement("img");
 const right_page = document.createElement("img");
 
@@ -48,19 +50,41 @@ function select_chapter(button_id) {
   pages[1] = pages[0] + 1;
   page_handler();
 }
+
+function chapter_handler(arr, num) {
+  var mid;
+  var lo = 0;
+  var hi = arr.length - 1;
+  while (hi - lo > 1) {
+    mid = Math.floor((lo + hi) / 2);
+    if (arr[mid] < num) {
+      lo = mid;
+    } else {
+      hi = mid;
+    }
+  }
+  if (arr[hi] == num) {
+    return hi + 1;
+  }
+  return lo + 1;
+}
+
 function page_handler() {
   left_page.src = `../pdf/img/${pages[0]}.jpeg`;
   right_page.src = `../pdf/img/${pages[1]}.jpeg`;
+
   left_number.innerHTML = pages[0];
   right_number.innerHTML = pages[1];
+
   table_of_contents
     .querySelector(".current-chapter")
     .classList.remove("current-chapter");
-  if (pages[1] >= data[Math.ceil(pages[1] / 8) - 1].start) {
-    chapter = Math.ceil(pages[1] / 8);
-  } else {
-    chapter = Math.ceil(pages[1] / 8) - 1;
-  }
+
+  chapter = chapter_handler(start_pages, pages[1]);
+
+  console.log(start_pages);
+  console.log(chapter);
+
   table_of_contents
     .querySelector(`:nth-child(${chapter} of li)`)
     .classList.add("current-chapter");

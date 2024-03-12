@@ -2,22 +2,25 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 35%;
+  width: 50%;
+  height: 550px;
   flex-grow: 1;
+  margin-top: 70px;
 }
 
 .book_page {
   display: block;
   background-color: $bg-blue;
-  width: 500px;
+  width: 700px;
   height: 100%;
-  margin-right: 2px;
+  margin-right: 10px;
 }
 .book_page img {
   width: 100%;
   height: auto;
   display: block;
   margin-bottom: 15px;
+  box-shadow: 10px 10px 20px #14315e;
 }
 .book_page span {
   @include sub-font(16px);
@@ -38,4 +41,10 @@
     -webkit-transition: opacity 0.3s ease-out;
     -o-transition: opacity 0.3s ease-out;
   }
+  &:after {
+    content: "p";
+  }
+}
+#next-page-button {
+  rotate: 180deg;
 }
